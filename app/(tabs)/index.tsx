@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from "react-native";
 
-export default function CalendarScreen() {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text>Tab [Home|Calendar]</Text>
+      <Text>Tab [Home|Settings]</Text>
     </View>
   );
 }
