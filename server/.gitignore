@@ -7,6 +7,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# dependencies
+node_modules/
 coverage
 node_modules
 dist
@@ -14,6 +16,7 @@ build
 dist-ssr
 *.local
 .env
+.github
 
 # Editor directories and files
 !.vscode/extensions.json
