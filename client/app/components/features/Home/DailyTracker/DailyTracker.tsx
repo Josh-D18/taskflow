@@ -1,69 +1,38 @@
-import { Button } from '@/app/components/common/Button/Button';
-import Entypo from '@expo/vector-icons/Entypo';
+import Button from "@/app/components/common/Button/Button";
+import Entypo from "@expo/vector-icons/Entypo";
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { AnimatedCircularProgress } from 'react-native-circular-progress';
+import { View, Text, TouchableOpacity } from "react-native";
+import { AnimatedCircularProgress } from "react-native-circular-progress";
 
-export const DailyTracker = () => {
+const DailyTracker = () => {
+  return (
+    <View className="bg-purple-700 rounded-[40px] p-4 h-[200px] flex-row mt-4 justify-around items-center">
+      {/* Info Section */}
+      <View className="w-[150px] self-start">
+        <Text className="text-white pb-6">Today's Task Is Almost Done</Text>
+        <Button content="View Task" btnStyle="bg-white text-purple-700 px-3 py-2 rounded-lg text-center" />
+      </View>
 
-    return (
-        <View style={styles.container}>
-            <View style={styles.infoContainer}>
-                <Text style={styles.trackerText}>Your Today's Task Is Almost Done</Text> 
-                <Entypo name="dots-three-horizontal" size={24} style={styles.icon} color="white" />
-            </View>
-            
-            <View style={styles.progressContainer}>
-                {/* Progress Wheel */}
-                <AnimatedCircularProgress
-                    size={80}
-                    width={10}
-                    fill={75}
-                    tintColor="#0073e6"
-                    onAnimationComplete={() => console.log('onAnimationComplete')}
-                    backgroundColor="#3d5875" 
-                />
+      {/* Progress Wheel */}
+      <View className="flex-2 self-center">
+        <AnimatedCircularProgress
+          size={85}
+          width={7}
+          fill={75}
+          tintColor="#0073e6"
+          onAnimationComplete={() => console.log("onAnimationComplete")}
+          backgroundColor="#3d5875"
+        />
+      </View>
 
-                <Button content='View Task' btnStyle={styles.btn}></Button>
-            </View>
-        </View>
-    )
-}
+      {/* Icon Button */}
+      <View className="flex-3 items-center self-start">
+        <TouchableOpacity onPress={() => {/* do this */}}>
+          <Entypo name="dots-three-horizontal" size={24} className="bg-purple-500 w-9 h-9 rounded-full text-center pt-1" />
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
 
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      marginTop: 15,
-      backgroundColor: '#5928ed',
-      borderRadius: 20,
-      padding: 16
-    },
-    icon : {
-
-    },
-
-    btn: {
-        color: '#5928ed',
-        backgroundColor: '#fff',
-        padding: 9,
-        borderRadius: 10
-    },
-    progressContainer: {
-        flex: 3,
-
-    },
-    infoContainer:{
-        flex: 1,
-        flexDirection: 'row'
-    }, 
-    trackerText: {
-        width: 175,
-        color: '#fff'
-    }
-
-  });
-  
+export default DailyTracker;

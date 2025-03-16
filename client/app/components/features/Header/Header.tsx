@@ -1,52 +1,26 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image } from "react-native";
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
-export const Header = () => {
-    return (
-        <View style={styles.container}>
-        <View style={styles.contentContainer}>
-            <Image source={{uri: "https://reactnative.dev/img/tiny_logo.png"}} style={styles.image}/>
-            <View style={styles.userContentContainer}>
-                <Text style={styles.greetingText}>Hello!</Text>
-                <Text style={styles.userName}>Josh Date</Text>
-            </View>
+const Header = () => {
+  return (
+    <View className="flex-row items-center justify-center mt-4 px-6">
+      {/* User Profile Section */}
+      <View className="flex-row flex-1 items-center">
+        <Image
+          source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+          style={{ width: 60, height: 60, borderRadius: 999 }}
+        />
+        <View className="ml-3 mt-1">
+          <Text className="text-base font-normal mb-1">Hello!</Text>
+          <Text className="text-lg font-medium">Josh Date</Text>
         </View>
+      </View>
+      {/* Notification Icon */}
         <MaterialCommunityIcons name="bell" size={24} color="black" />
-        {/* When User Gets A Notification, change the icon */}
-        {/* <MaterialCommunityIcons name="bell-badge" size={24} color="black" /> */}
-        </View>
-    )
-}
+      {/* When User Gets A Notification, change the icon */}
+      {/* <MaterialCommunityIcons name="bell-badge" size={24} color="black" /> */}
+    </View>
+  );
+};
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-      marginTop: 15,
-    },
-    contentContainer: {
-        flex: 1,
-        flexDirection: 'row',
-    },
-    image: {
-        width: 60,
-        height: 60,
-        borderRadius: 99
-    },
-    userContentContainer: {
-        marginLeft: 12,
-        marginTop: 3
-    },
-    greetingText: {
-        fontSize: 15,
-        fontWeight: '400',
-        marginBottom: 3
-    },
-    userName: {
-        fontSize: 17,
-        fontWeight: '500'
-    }
-  });
-  
+export default Header;

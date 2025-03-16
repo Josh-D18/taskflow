@@ -23,15 +23,6 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="createtask"
-        options={{
-          title: "",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="plus" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="notification"
         options={{
           title: "Notification",
@@ -52,3 +43,14 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+
+
+ {/* <Tabs.Screen
+        name="createtask"
+        options={{
+          title: "",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="plus" color={color} />
+          ),
+        }}
+      /> */}
