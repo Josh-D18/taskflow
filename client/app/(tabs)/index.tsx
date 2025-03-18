@@ -1,23 +1,26 @@
-import { View, StyleSheet, Text, ScrollView } from "react-native";
-import Header from "@/app/components/features/Header/Header";
+import { FlatList,View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import DailyTracker  from "../components/features/Home/DailyTracker/DailyTracker";
-import InProgress from "../components/features/Home/InProgress/InProgress";
-import TaskGroups from "../components/features/Home/TaskGroups/TaskGroups";
+import data from "@/data/groupList.json"
+import Task from "../components/features/Home/TaskGroups/ui/Task";
+import HeaderComponent from "../components/features/Home/HeaderComponent/HeaderComponent";
 
 export default function HomeScreen() {
   return (
     <SafeAreaProvider>
       <SafeAreaView>
-        <ScrollView>
-          <Header/>
-          <View className="px-4 mx-[16px]">
-            <DailyTracker/>
-            <InProgress/>
-            <TaskGroups/>
-          </View>
-        </ScrollView>
+        <FlatList 
+            data={data}
+            renderItem={({item}) => 
+              <View className="px-4 mx-[14px]">
+                <Task title={item.title} amountOfTasks={item.amountOfTasks} completionPercentage={item.completionPercentage} />
+              </View>
+          }
+            keyExtractor={item => item.id}
+            ListHeaderComponent={<HeaderComponent/>}
+            >
+        </FlatList>
       </SafeAreaView>
     </SafeAreaProvider>
   );
 }
+

@@ -1,19 +1,18 @@
-import { TouchableOpacity, View, Text, StyleProp, ViewStyle } from "react-native"
+import { TouchableOpacity, View, Text } from "react-native";
+import { ButtonProps } from "react-native";
 
-interface IButton {
-    content: string,
-    btnStyle?: string
+interface IButton extends ButtonProps {
+  btnStyle?: string;
 }
 
-const Button = (props: IButton) => {
-    const {content, btnStyle} = props;
-    return (
-        <TouchableOpacity onPress={() => {/* do this */}}>
-            <View className={btnStyle}
-            >
-                <Text>{content}</Text>
-            </View>
-        </TouchableOpacity>
-        )
-}
-export default Button
+type CustomButton = Partial<IButton>;
+
+const Button: React.FC<CustomButton> = ({  btnStyle, title, ...rest }) => {
+  return (
+    <TouchableOpacity {...rest}>
+        <Text className={btnStyle}>{title}</Text>
+    </TouchableOpacity>
+  );
+};
+
+export default Button;

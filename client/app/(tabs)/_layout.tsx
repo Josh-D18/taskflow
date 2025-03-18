@@ -40,17 +40,16 @@ export default function TabLayout() {
           ),
         }}
       />
+       <Tabs.Screen
+        name="groups"
+        options={{
+          title: "Groups",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="tasks" color={color} />
+          ),
+        }}
+      />
+
     </Tabs>
   );
 }
-
-
- {/* <Tabs.Screen
-        name="createtask"
-        options={{
-          title: "",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="plus" color={color} />
-          ),
-        }}
-      /> */}

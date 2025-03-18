@@ -1,0 +1,33 @@
+[
+    {
+      "id": "1",
+      "title": "Frontend Development",
+      "amountOfTasks": 10,
+      "completionPercentage": 0.6
+    },
+    {
+      "id": "2",
+      "title": "Backend Development",
+      "amountOfTasks": 8,
+      "completionPercentage": 0.5
+    },
+    {
+      "id": "3",
+      "title": "Database Setup",
+      "amountOfTasks": 5,
+      "completionPercentage": 0.2
+    },
+    {
+      "id": "4",
+      "title": "Testing & Debugging",
+      "amountOfTasks": 7,
+      "completionPercentage": 0.8
+    },
+    {
+      "id": "5",
+      "title": "Deployment",
+      "amountOfTasks": 3,
+      "completionPercentage": 0
+    }
+  ]
+  

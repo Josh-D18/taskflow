@@ -1,0 +1,33 @@
+[
+    {
+      "id": "task-001",
+      "title": "UI Design Fixes",
+      "description": "Adjust button padding",
+      "completionPercentage": 0.4
+    },
+    {
+      "id": "task-002",
+      "title": "API Integration",
+      "description": "Connect login endpoint",
+      "completionPercentage": 0.6
+    },
+    {
+      "id": "task-003",
+      "title": "Bug Fixing",
+      "description": "Resolve crashing issue",
+      "completionPercentage": 0.3
+    },
+    {
+      "id": "task-004",
+      "title": "Performance Optimization",
+      "description": "Reduce image load time",
+      "completionPercentage": 0.5
+    },
+    {
+      "id": "task-005",
+      "title": "Testing",
+      "description": "Run unit tests",
+      "completionPercentage": 0.2
+    }
+  ]
+  
