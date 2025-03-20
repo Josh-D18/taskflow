@@ -5,7 +5,7 @@ export default function TabLayout() {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: "blue", headerShown: false }}>
       <Tabs.Screen
-        name="index"
+        name="home/index"
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
@@ -14,7 +14,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="chat"
+        name="chat/index"
         options={{
           title: "Chat",
           tabBarIcon: ({ color }) => (
@@ -23,7 +23,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="notification"
+        name="notification/index"
         options={{
           title: "Notification",
           tabBarIcon: ({ color }) => (
@@ -32,7 +32,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="calendar"
+        name="calendar/index"
         options={{
           title: "Calendar",
           tabBarIcon: ({ color }) => (
@@ -40,8 +40,8 @@ export default function TabLayout() {
           ),
         }}
       />
-       <Tabs.Screen
-        name="groups"
+      <Tabs.Screen
+        name="groups/index"
         options={{
           title: "Groups",
           tabBarIcon: ({ color }) => (

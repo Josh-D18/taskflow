@@ -1,7 +1,8 @@
-import { View, FlatList } from "react-native"
+import { View } from "react-native"
 import { useState } from "react";
 import MESSAGES from "@/data/chatMessages.json"
 import ChatBox from "../ChatBox/ChatBox";
+import { FlashList } from "@shopify/flash-list";
 
 interface IDirectMessageData {
     conversation_id: string;
@@ -37,20 +38,20 @@ const DisplayChat = (props: IChat) => {
     const { isGroup } = props;
     const [groupChatData] = useState<IGroupMessageData>(MESSAGES.groupChats[0]);
     const [directMessageData] = useState<IDirectMessageData>(MESSAGES.directMessages[0])
-   
+
     return (
-        <View>
+        <View className="w-full h-full">
             {isGroup ?   
-                <FlatList
+                <FlashList
                     data={groupChatData['messages']}
-                    initialNumToRender={7}
+                    estimatedItemSize={Math.round(Math.floor(groupChatData['messages'].length / 2))}
                     renderItem={({item}) => <ChatBox content={item.content} username={item.username} avatar={item.avatar} />}
                     keyExtractor={item => item.message_id} 
                 /> 
             :  
-                <FlatList
+                <FlashList
                     data={directMessageData['messages']}
-                    initialNumToRender={7}
+                    estimatedItemSize={Math.round(Math.floor(directMessageData['messages'].length / 2))}
                     renderItem={({item}) => <ChatBox content={item.content} username={item.username} avatar={item.avatar} />}
                     keyExtractor={item => item.message_id} 
                 />

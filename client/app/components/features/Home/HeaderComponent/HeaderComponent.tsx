@@ -1,10 +1,11 @@
-import { View, FlatList } from "react-native"
+import { View } from "react-native"
 import Header from "../Header/Header"
 import DailyTracker from "../DailyTracker/DailyTracker"
 import GroupTaskHeader from "../TaskGroups/ui/GroupTaskHeader"
 import InProgress from "../InProgress/InProgress"
 import inprogressData from "@/data/inprogress.json"
 import InProgressHeader from "../InProgress/ui/inProgressHeader"
+import { FlashList } from "@shopify/flash-list";
 
 const HeaderComponent = () => {
     return (
@@ -13,8 +14,9 @@ const HeaderComponent = () => {
             <View className="px-4 mx-[16px]">
                 <DailyTracker/>
                 <InProgressHeader/>
-                <FlatList
+                <FlashList
                     data={inprogressData}
+                    estimatedItemSize={inprogressData.length}
                     renderItem={({item}) => <InProgress title={item.title} description={item.description} completionPercentage={item.completionPercentage} />}
                     keyExtractor={(item) => item.id}
                     horizontal
@@ -22,7 +24,7 @@ const HeaderComponent = () => {
                     snapToAlignment="start"
                     showsHorizontalScrollIndicator={false}
                     >
-                </FlatList>
+                </FlashList>
                 <GroupTaskHeader/>
             </View> 
         </View>
