@@ -21,7 +21,7 @@ const Task = (props: ITask) => {
                 
                 <View className="self-center mt-2 w-[170px]">
                     <Text className="text-wrap px-2 text-[14px] pb-2">{title}</Text>
-                    <Text className="text-wrap px-2 text-[12px]">{amountOfTasks} Tasks</Text>
+                    <Text className="text-wrap px-2 text-[12px] text-[#7e7e7e]">{amountOfTasks} Tasks</Text>
                 </View>
                 <Progress.Circle size={50} progress={completionPercentage} showsText borderColor="white"/>
             </View>

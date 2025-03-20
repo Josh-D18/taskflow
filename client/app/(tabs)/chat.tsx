@@ -1,17 +1,17 @@
-import { View, Text, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import Header from "../components/common/Header/Header";
+import ChatNavigation from "../components/features/Chat/ChatNavigation";
 
 export default function ChatScreen() {
+
   return (
-    <View style={styles.container}>
-      <Text>Tab [Home|Settings]</Text>
-    </View>
+      <SafeAreaProvider>
+          <SafeAreaView>
+            <Header headingTitle="Messages"/>
+            <ChatNavigation />
+          </SafeAreaView>
+      </SafeAreaProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});

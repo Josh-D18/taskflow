@@ -1,0 +1,113 @@
+{
+    "groupChats": [
+      {
+        "group_id": "group-001",
+        "group_name": "Project Alpha",
+        "group_creator": {
+          "user_id": "user-101",
+          "username": "JohnDoe",
+          "avatar": "https://i.pravatar.cc/150?img=1"
+        },
+        "messages": [
+          {
+            "message_id": "msg-001",
+            "user_id": "user-101",
+            "username": "JohnDoe",
+            "avatar": "https://i.pravatar.cc/150?img=1",
+            "content": "Hey team, let's finalize the task list today.",
+            "timestamp": "2025-03-16T14:30:00Z"
+          },
+          {
+            "message_id": "msg-002",
+            "user_id": "user-102",
+            "username": "JaneSmith",
+            "avatar": "https://i.pravatar.cc/150?img=2",
+            "content": "I’ve updated the bug fixes section.",
+            "timestamp": "2025-03-16T14:32:15Z"
+          },
+          {
+            "message_id": "msg-003",
+            "user_id": "user-103",
+            "username": "MikeLee",
+            "avatar": "https://i.pravatar.cc/150?img=3",
+            "content": "Great! I'll check it now.",
+            "timestamp": "2025-03-16T14:35:20Z"
+          }
+        ]
+      },
+      {
+        "group_id": "group-002",
+        "group_name": "Marketing Team",
+        "group_creator": {
+          "user_id": "user-104",
+          "username": "SarahConnor",
+          "avatar": "https://i.pravatar.cc/150?img=4"
+        },
+        "messages": [
+          {
+            "message_id": "msg-004",
+            "user_id": "user-104",
+            "username": "SarahConnor",
+            "avatar": "https://i.pravatar.cc/150?img=4",
+            "content": "Campaign assets are ready!",
+            "timestamp": "2025-03-16T15:00:00Z"
+          },
+          {
+            "message_id": "msg-005",
+            "user_id": "user-105",
+            "username": "DavidBrown",
+            "avatar": "https://i.pravatar.cc/150?img=5",
+            "content": "I'll review them now.",
+            "timestamp": "2025-03-16T15:05:30Z"
+          }
+        ]
+      }
+    ],
+    "directMessages": [
+      {
+        "conversation_id": "conv-001",
+        "participants": ["user-101", "user-102"],
+        "messages": [
+          {
+            "message_id": "msg-006",
+            "user_id": "user-101",
+            "username": "JohnDoe",
+            "avatar": "https://i.pravatar.cc/150?img=1",
+            "content": "Hey Jane, did you see the new UI updates?",
+            "timestamp": "2025-03-16T16:10:00Z"
+          },
+          {
+            "message_id": "msg-007",
+            "user_id": "user-102",
+            "username": "JaneSmith",
+            "avatar": "https://i.pravatar.cc/150?img=2",
+            "content": "Yes! They look great.",
+            "timestamp": "2025-03-16T16:12:45Z"
+          }
+        ]
+      },
+      {
+        "conversation_id": "conv-002",
+        "participants": ["user-103", "user-104"],
+        "messages": [
+          {
+            "message_id": "msg-008",
+            "user_id": "user-103",
+            "username": "MikeLee",
+            "avatar": "https://i.pravatar.cc/150?img=3",
+            "content": "Let's meet at 3 PM to discuss the dashboard.",
+            "timestamp": "2025-03-16T17:00:00Z"
+          },
+          {
+            "message_id": "msg-009",
+            "user_id": "user-104",
+            "username": "SarahConnor",
+            "avatar": "https://i.pravatar.cc/150?img=4",
+            "content": "Sounds good! See you then.",
+            "timestamp": "2025-03-16T17:02:20Z"
+          }
+        ]
+      }
+    ]
+  }
+  
