@@ -1,9 +1,20 @@
 import { View, Text } from "react-native"
 import data from "@/data/groupList.json"
 import Task from "./ui/Task";
-import { FlashList } from "@shopify/flash-list";
+import { FlashList, ListRenderItemInfo } from "@shopify/flash-list";
 
 const TaskGroups = () => {
+    const renderItem = ({item}: ListRenderItemInfo<{
+        id: string;
+        title: string;
+        amountOfTasks: number;
+        completionPercentage: number;
+    }>) => {
+        return (
+            <Task title={item.title} amountOfTasks={item.amountOfTasks} completionPercentage={item.completionPercentage} />
+        )
+    }
+
     return (
         <View>
             <View className="flex-row mt-4 items-center mb-6">
@@ -15,7 +26,7 @@ const TaskGroups = () => {
             <FlashList 
                 data={data}
                 estimatedItemSize={data.length}
-                renderItem={({item}) => <Task title={item.title} amountOfTasks={item.amountOfTasks} completionPercentage={item.completionPercentage} />}
+                renderItem={renderItem}
                 keyExtractor={item => item.id}>
             </FlashList>
         </View>

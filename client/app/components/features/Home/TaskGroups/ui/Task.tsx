@@ -13,7 +13,7 @@ const Task = (props: ITask) => {
     
     return (
         <TouchableOpacity onPress={onPress}>
-            <View className="flex bg-white mb-5 rounded-[15px] p-5 flex-row w-full items-center justify-evenly h-[115px]">
+            <View className="flex bg-white mb-5 rounded-[15px] p-5 flex-row w-full items-center justify-evenly h-[90px]">
                 <Image
                     source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
                     style={{ width: 45, height: 45, borderRadius: 999 }}
