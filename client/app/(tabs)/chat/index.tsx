@@ -8,7 +8,7 @@ export default function ChatScreen() {
   return (
       <SafeAreaProvider>
           <SafeAreaView>
-            <Header headingTitle="Messages"/>
+            <Header headingTitle="Messages" isChat/>
             <ChatNavigation />
           </SafeAreaView>
       </SafeAreaProvider>

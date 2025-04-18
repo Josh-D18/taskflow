@@ -1,0 +1,49 @@
+{
+    "new": [
+      {
+        "id": "notif_001",
+        "title": "🔔 New Message: Client Feedback Review",
+        "lastReceived": "5 mins ago",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1827/1827392.png",
+        "group": "Client Communication"
+      },
+      {
+        "id": "notif_002",
+        "title": "📦 Update: Delivery Confirmation Task",
+        "lastReceived": "12 mins ago",
+        "icon": "https://cdn-icons-png.flaticon.com/512/2910/2910768.png",
+        "group": "Logistics"
+      },
+      {
+        "id": "notif_003",
+        "title": "📅 Event: Sync with Dev Team",
+        "lastReceived": "20 mins ago",
+        "icon": "https://cdn-icons-png.flaticon.com/512/747/747310.png",
+        "group": "Development"
+      }
+    ],
+    "old": [
+      {
+        "id": "notif_004",
+        "title": "✅ Reminder: Unit Test Review",
+        "lastReceived": "3 hours ago",
+        "icon": "https://cdn-icons-png.flaticon.com/512/3771/3771362.png",
+        "group": "Quality Assurance"
+      },
+      {
+        "id": "notif_005",
+        "title": "🛠 Fix: Mobile View Bug",
+        "lastReceived": "5 hours ago",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1040/1040230.png",
+        "group": "Frontend"
+      },
+      {
+        "id": "notif_006",
+        "title": "💬 Alert: User Comment Moderation",
+        "lastReceived": "Yesterday",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828961.png",
+        "group": "Community Management"
+      }
+    ]
+  }
+  

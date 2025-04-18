@@ -4,11 +4,12 @@ import Entypo from "@expo/vector-icons/Entypo";
 
 interface IHeader {
     headingTitle: string;
+    isChat?: boolean;
 }
 
 const Header = (props: IHeader) => {
-    const { headingTitle } = props;
-
+    const { headingTitle, isChat } = props;
+    
     return (
         <View className="h-[100px]">  
             <View className="flex-1 w-full flex-row items-start justify-around mt-7">
@@ -18,9 +19,12 @@ const Header = (props: IHeader) => {
                 
                 <Text className="text-[18px] tracking-[-0.3px]">{headingTitle}</Text>
 
-                <TouchableOpacity className="mt-1">
-                    <Entypo name="new-message" size={25} color="black" />
-                </TouchableOpacity>
+                {
+                    isChat ? 
+                    <TouchableOpacity className="mt-1">
+                        <Entypo name="new-message" size={25} color="black" />
+                    </TouchableOpacity> : ""
+                }
             </View>
         </View>
     )
