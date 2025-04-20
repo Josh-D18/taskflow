@@ -6,19 +6,19 @@ interface INotification {
     title: string, 
     lastReceived: string, 
     icon: string,
-    group: string
+    description: string
 }
 
 const DisplayNotification = (notification: INotification) => {
-    const { title, lastReceived, icon, group} = notification
+    const { title, lastReceived, icon, description} = notification
     return (
-        <View className="flex-1 flex-row">
-            <Image source={{uri: icon}} className="w-[60px] bg-black h-[60px] rounded-full" />
-            <View>
-                <Text>{title}</Text>
-                <Text>{group}</Text>
+        <View className="flex-1 flex-row pb-5 justify-evenly">
+            <Image source={{uri: icon}} className="w-[45px] bg-black h-[45px] rounded-full" />
+            <View className="pt-3 pl-2 w-[250px]">
+                <Text className="text-[13px]">{title}</Text>
+                <Text className="">{description}</Text>
             </View>
-            <Text>{lastReceived}</Text>
+            <Text className="text-[9px] pt-5">{lastReceived}</Text>
         </View>
     )
 }

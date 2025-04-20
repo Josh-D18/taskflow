@@ -7,21 +7,21 @@ import DisplayNotification from "@/app/components/features/Notifications/Display
 
 export default function NotificationScreen() {
 
-  const renderItem = (title:string, lastReceived: string, icon:string, group: string) => {
-    return <DisplayNotification  title={title} lastReceived={lastReceived} icon={icon} group={group} />
+  const renderItem = (title:string, lastReceived: string, icon:string, description: string) => {
+    return <DisplayNotification  title={title} lastReceived={lastReceived} icon={icon} description={description} />
   }
   return (
       <SafeAreaProvider>
         <SafeAreaView>
         <Header headingTitle="Notifications"/>
-          <View className="px-7 flex-11 h-full w-full">
+          <View className="px-5 flex-11 h-full w-full">
             <Text className="pb-5 font-bold text-[18px]">New</Text>
             {/* Display New Notifications */}
             <View className="w-full h-[250px]">
               <FlashList 
                 data={data.new}
                 estimatedItemSize={data.new.length}
-                renderItem={({item}) => renderItem(item.title, item.lastReceived, item.icon, item.group)}
+                renderItem={({item}) => renderItem(item.title, item.lastReceived, item.icon, item.description)}
                 keyExtractor={item => item.id}
                 showsHorizontalScrollIndicator={false}
                 />      
@@ -33,7 +33,7 @@ export default function NotificationScreen() {
                 <FlashList 
                   data={data.old}
                   estimatedItemSize={data.old.length}
-                  renderItem={({item}) => renderItem(item.title, item.lastReceived, item.icon, item.group)}
+                  renderItem={({item}) => renderItem(item.title, item.lastReceived, item.icon, item.description)}
                   keyExtractor={item => item.id}
                   showsHorizontalScrollIndicator={false}
                   /> 
